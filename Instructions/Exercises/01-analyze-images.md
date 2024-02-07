@@ -13,9 +13,9 @@ O Visão de IA do Azure é um recurso de inteligência artificial que permite qu
 Se você ainda não clonou o repositório de código de **Visão de IA do Azure** para o ambiente em que está trabalhando neste laboratório, siga estas etapas para fazer isso. Caso contrário, abra a pasta clonada no Visual Studio Code.
 
 1. Inicie o Visual Studio Code.
-2. Abra a paleta (SHIFT+CTRL+P) e execute um comando **Git: Clone** para clonar o repositório `https://github.com/MicrosoftLearning/mslearn-ai-vision` para uma pasta local (não importa qual pasta).
-3. Quando o repositório tiver sido clonado, abra a pasta no Visual Studio Code.
-4. Aguarde enquanto arquivos adicionais são instalados para dar suporte aos projetos de código C# no repositório.
+2. Abra a paleta (SHIFT+CTRL+P) e execute o comando **Git: Clone** para clonar o repositório `https://github.com/MicrosoftLearning/mslearn-ai-vision` em uma pasta local (não importa qual pasta).
+3. Depois que o repositório for clonado, abra a pasta no Visual Studio Code.
+4. Aguarde enquanto os arquivos adicionais são instalados para dar suporte aos projetos de código C# no repositório.
 
     > **Observação**: se você for solicitado a adicionar ativos necessários para compilar e depurar, selecione **Agora não**. Se você for surpreendido com a mensagem *Detectado um projeto de função do Azure na pasta*, você pode fechar essa mensagem com segurança.
 
@@ -23,7 +23,7 @@ Se você ainda não clonou o repositório de código de **Visão de IA do Azure*
 
 Caso ainda não tenha um na sua assinatura, provisione um recurso dos **Serviços de IA do Azure**.
 
-1. Abra o portal do Azure em `https://portal.azure.com` usando a conta Microsoft associada à sua assinatura do Azure.
+1. Abra o portal do Azure em `https://portal.azure.com` e entre usando a conta Microsoft associada à sua assinatura do Azure.
 2. Na barra de pesquisa superior, pesquise *serviços de IA do Azure*, selecione **Serviços de IA do Azure** e crie um recurso de conta multisserviço dos serviços de IA do Azure com as seguintes configurações:
     - **Assinatura**: *sua assinatura do Azure*
     - **Grupo de recursos**: *escolha ou crie um grupo de recursos (se você estiver usando uma assinatura restrita, talvez não tenha permissão para criar um novo grupo de recursos; use o que foi fornecido)*
@@ -49,7 +49,7 @@ Neste exercício, você concluirá um aplicativo cliente parcialmente implementa
     **C#**
     
     ```
-    dotnet add package Azure.AI.Vision.ImageAnalysis --prerelease
+    dotnet add package Azure.AI.Vision.ImageAnalysis -v 0.15.1-beta.1
     ```
 
     > **Observação**: se você for solicitado a instalar extensões de kit de desenvolvimento, você pode fechar a mensagem com segurança.
@@ -57,7 +57,7 @@ Neste exercício, você concluirá um aplicativo cliente parcialmente implementa
     **Python**
     
     ```
-    pip install azure-ai-vision
+    pip install azure-ai-vision==0.15.1b1
     ```
     
 3. Exiba o conteúdo da pasta **image-analysis** e observe que ela contém um arquivo para definições de configuração:
@@ -558,7 +558,7 @@ analysis_options.segmentation_mode = sdk.ImageSegmentationMode.FOREGROUND_MATTIN
 
 Se você não estiver usando os recursos do Azure criados neste laboratório para outros módulos de treinamento, poderá excluí-los para evitar incorrer em cobranças adicionais. Este é o procedimento:
 
-1. Abra o portal do Azure em `https://portal.azure.com` usando a conta Microsoft associada à sua assinatura do Azure.
+1. Abra o portal do Azure em `https://portal.azure.com` e entre usando a conta Microsoft associada à sua assinatura do Azure.
 
 2. Na barra de pesquisa superior, procure a *conta multisserviço dos serviços de IA do Azure* e selecione o recurso de conta multisserviço dos serviços de IA do Azure que você criou neste laboratório.
 
