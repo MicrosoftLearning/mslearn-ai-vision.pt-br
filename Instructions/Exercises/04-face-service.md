@@ -264,7 +264,7 @@ Agora está tudo pronto para usar o SDK para chamar o serviço de Visão e detec
 
 Enquanto o serviço de **Visão de IA do Azure** oferece detecção facial básica (juntamente com muitos outros recursos de análise de imagem), o serviço de **Detecção Facial** fornece funcionalidade mais abrangente para análise e reconhecimento facial.
 
-1. No Visual Studio Code, no painel **Explorer**, procure a pasta **19-face** e expanda a pasta **C-Sharp** ou a pasta **Python** dependendo da sua preferência de linguagem.
+1. No Visual Studio Code, no painel **Explorer**, navegue até a pasta **04-face** e expanda a pasta **C-Sharp** ou a pasta **Python** dependendo da sua preferência de liguagem.
 2. Clique com o botão direito do mouse na pasta **face-api** e abra um terminal integrado. Em seguida, instale o pacote SDK de Detecção Facial executando o comando apropriado para sua preferência de linguagem:
 
     **C#**
