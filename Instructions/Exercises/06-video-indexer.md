@@ -15,9 +15,9 @@ Grande parte dos dados criados e consumidos hoje está no formato de vídeo. O *
 Se você clonou o repositório de código **mslearn-ai-vision** para o ambiente em que está trabalhando neste laboratório, abra-o no Visual Studio Code, caso contrário, siga estas etapas para cloná-lo agora.
 
 1. Inicie o Visual Studio Code.
-2. Abra a paleta (SHIFT+CTRL+P) e execute um comando **Git: Clone** para clonar o repositório `https://github.com/MicrosoftLearning/mslearn-ai-vision` para uma pasta local (não importa qual pasta).
-3. Quando o repositório tiver sido clonado, abra a pasta no Visual Studio Code.
-4. Aguarde enquanto arquivos adicionais são instalados para dar suporte aos projetos de código C# no repositório.
+2. Abra a paleta (SHIFT+CTRL+P) e execute o comando **Git: Clone** para clonar o repositório `https://github.com/MicrosoftLearning/mslearn-ai-vision` em uma pasta local (não importa qual pasta).
+3. Depois que o repositório for clonado, abra a pasta no Visual Studio Code.
+4. Aguarde enquanto os arquivos adicionais são instalados para dar suporte aos projetos de código C# no repositório.
 
     > **Observação**: se você for solicitado a adicionar ativos necessários para compilar e depurar, selecione **Agora não**.
 
@@ -29,8 +29,9 @@ Primeiro, você precisará entrar no portal do Analisador de Vídeo e carregar u
 
 1. No navegador, abra o portal Analisador de Vídeo em `https://www.videoindexer.ai`.
 2. Se você tiver uma conta existente do Analisador de Vídeo, entre nela. Caso contrário, inscreva-se em uma conta gratuita e entre usando sua conta Microsoft (ou qualquer outro tipo de conta válido). Se tiver dificuldade em iniciar sessão, tente abrir uma sessão privada do navegador.
-3. No Analisador de Vídeo, selecione a opção **Upload**. Em seguida, selecione a opção **Inserir URL**, digite `https://aka.ms/responsible-ai-video` e clique em **Adicionar**. Altere o nome padrão para **IA responsável**, revise a configuração padrão, marque a caixa de seleção para verificar a conformidade com as políticas da Microsoft para reconhecimento facial e carregue o arquivo.
-4. Depois que o arquivo for carregado, aguarde alguns minutos enquanto o Analisador de Vídeo faça a indexação.
+3. Em uma nova aba, faça o download do vídeo de IA Responsável visitando `https://aka.ms/responsible-ai-video`. Salve o arquivo.
+4. No Analisador de Vídeo, selecione a opção **Upload**. Em seguida, selecione a opção **Procurar arquivos**, selecione o vídeo baixado e clique em **Adicionar**. Altere o nome padrão para **IA responsável**, revise a configuração padrão, marque a caixa de seleção para verificar a conformidade com as políticas da Microsoft para reconhecimento facial e carregue o arquivo.
+5. Depois que o arquivo for carregado, aguarde alguns minutos enquanto o Analisador de Vídeo faça a indexação.
 
 > **Observação**: neste exercício, estamos usando este vídeo para explorar a funcionalidade do Analisador de Vídeo, mas você deve reservar um tempo para assisti-lo na íntegra quando terminar o exercício, pois ele contém informações úteis e orientações para desenvolver aplicativos habilitados para IA com responsabilidade. 
 
