@@ -1,14 +1,16 @@
 ---
 lab:
   title: Detectar e analisar rostos
-  module: 'Module 10 - Detecting, Analyzing, and Recognizing Faces'
+  module: Module 4 - Detecting and Analyze Faces
 ---
 
 # Detectar e analisar rostos
 
 A capacidade de detectar e analisar rostos humanos é uma capacidade central de IA. Neste exercício, você explorará dois Serviços de IA do Azure que você pode usar para trabalhar com rostos em imagens: o serviço de **Visão de IA do Azure** e o serviço de **detecção facial**.
 
-> **Observação**: a partir de 21 de junho de 2022, os recursos dos serviços de IA do Azure que retornam informações de identificação pessoal são restritos aos clientes que receberam [acesso ilimitado](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-limited-access). Além disso, capacidades que inferem o estado emocional não estão mais disponíveis. Essas restrições podem afetar este exercício de laboratório. Estamos trabalhando para resolver isso, mas por enquanto você pode enfrentar alguns erros ao seguir as etapas abaixo; pelos quais pedimos desculpas. Para obter mais detalhes sobre as alterações feitas pela Microsoft e por quê – consulte [Investimentos em IA responsável e proteções para reconhecimento facial](https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/).
+> **Importante**: Esse laboratório pode ser concluído sem solicitar acesso adicional a recursos restritos.
+
+> **Observação**: a partir de 21 de junho de 2022, os recursos dos serviços de IA do Azure que retornam informações de identificação pessoal são restritos aos clientes que receberam [acesso ilimitado](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-limited-access). Além disso, capacidades que inferem o estado emocional não estão mais disponíveis. Para obter mais detalhes sobre as alterações feitas pela Microsoft e por quê – consulte [Investimentos em IA responsável e proteções para reconhecimento facial](https://azure.microsoft.com/blog/responsible-ai-investments-and-safeguards-for-facial-recognition/).
 
 ## Clone o repositório para este curso
 
