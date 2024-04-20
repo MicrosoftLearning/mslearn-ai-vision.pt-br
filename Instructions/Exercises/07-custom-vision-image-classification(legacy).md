@@ -1,7 +1,6 @@
 ---
 lab:
-  title: Classificar imagens com a Visão Personalizada de IA do Azure
-  module: Module 9 - Developing Custom Vision Solutions
+  title: Classificar imagens com a Visão Personalizada de IA do Azure (herdada)
 ---
 
 # Classificar imagens com a Visão Personalizada de IA do Azure
@@ -15,9 +14,9 @@ Neste exercício, você usa o serviço Visão Personalizada para treinar um mode
 Se você ainda não clonou o repositório de código **mslearn-ai-vision** para o ambiente em que está trabalhando neste laboratório, siga estas etapas para fazer isso. Caso contrário, abra a pasta clonada no Visual Studio Code.
 
 1. Inicie o Visual Studio Code.
-2. Abra a paleta (SHIFT+CTRL+P) e execute um comando **Git: Clone** para clonar o repositório `https://github.com/MicrosoftLearning/mslearn-ai-vision` para uma pasta local (não importa qual pasta).
-3. Quando o repositório tiver sido clonado, abra a pasta no Visual Studio Code.
-4. Aguarde enquanto arquivos adicionais são instalados para dar suporte aos projetos de código C# no repositório.
+2. Abra a paleta (SHIFT+CTRL+P) e execute o comando **Git: Clone** para clonar o repositório `https://github.com/MicrosoftLearning/mslearn-ai-vision` em uma pasta local (não importa qual pasta).
+3. Depois que o repositório for clonado, abra a pasta no Visual Studio Code.
+4. Aguarde enquanto os arquivos adicionais são instalados para dar suporte aos projetos de código C# no repositório.
 
     > **Observação**: se você for solicitado a adicionar ativos necessários para compilar e depurar, selecione **Agora não**. Se você for surpreendido com a mensagem *Detectado um projeto de função do Azure na pasta*, você pode fechar essa mensagem com segurança.
 
