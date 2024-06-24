@@ -93,7 +93,7 @@ Neste exercício, você concluirá um aplicativo cliente parcialmente implementa
 Neste exercício, você usará o serviço de Visão de IA do Azure para analisar múltiplas imagens.
 
 1. No Visual Studio Code, expanda a pasta **image-analysis** e **imagens** que ela contém.
-2. Selecione cada um dos arquivos de imagem por vez para exibi-lo no Visual Studio Code.
+2. Selecione cada um dos arquivos de imagem para vê-los no Visual Studio Code.
 
 ## Analisar uma imagem para sugerir uma legenda
 
