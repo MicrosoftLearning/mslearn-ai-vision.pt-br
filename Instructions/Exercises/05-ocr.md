@@ -49,7 +49,7 @@ Neste exercício, você concluirá um aplicativo cliente parcialmente implementa
     **C#**
     
     ```
-    dotnet add package Azure.AI.Vision.ImageAnalysis -v 1.0.0-beta.1
+    dotnet add package Azure.AI.Vision.ImageAnalysis -v 1.0.0-beta.3
     ```
 
     > **Observação**: se você for solicitado a instalar extensões de kit de desenvolvimento, você pode fechar a mensagem com segurança.
@@ -57,7 +57,7 @@ Neste exercício, você concluirá um aplicativo cliente parcialmente implementa
     **Python**
     
     ```
-    pip install azure-ai-vision-imageanalysis==1.0.0b1
+    pip install azure-ai-vision-imageanalysis==1.0.0b3
     ```
 
 3. Exiba o conteúdo da pasta **read text** e observe que ela contém um arquivo para definições de configuração:
@@ -70,7 +70,7 @@ Neste exercício, você concluirá um aplicativo cliente parcialmente implementa
 
 ## Usar a Visão de IA do Azure para ler texto em uma imagem
 
-um dos recursos do **SDK da Visão de IA do Azure** é a leitura de texto de uma imagem. Neste exercício, você concluirá um aplicativo cliente implantado parcialmente que usa o SDK da Visão de IA do Azure para leitura de texto de uma imagem.
+Um dos recursos do **SDK da Visão de IA do Azure** é a leitura de texto de uma imagem. Neste exercício, você concluirá um aplicativo cliente implantado parcialmente que usa o SDK da Visão de IA do Azure para leitura de texto de uma imagem.
 
 1. A pasta **read-text** contém um arquivo de código para o aplicativo cliente:
 
