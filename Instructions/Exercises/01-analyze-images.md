@@ -24,18 +24,19 @@ Se você ainda não clonou o repositório de código de **Visão de IA do Azure*
 Caso ainda não tenha um na sua assinatura, provisione um recurso dos **Serviços de IA do Azure**.
 
 1. Abra o portal do Azure em `https://portal.azure.com` e entre usando a conta Microsoft associada à sua assinatura do Azure.
-2. Na barra de pesquisa superior, pesquise *serviços de IA do Azure*, selecione **Serviços de IA do Azure** e crie um recurso de conta multisserviço dos serviços de IA do Azure com as seguintes configurações:
+2. Selecione **Criar um recurso**.
+3. Na barra de pesquisa, procure por *serviços de IA do Azure*, selecione **Serviços de IA do Azure** e crie um recurso de conta multisserviço dos Serviços de IA do Azure com as seguintes configurações:
     - **Assinatura**: *sua assinatura do Azure*
     - **Grupo de recursos**: *escolha ou crie um grupo de recursos (se você estiver usando uma assinatura restrita, talvez não tenha permissão para criar um novo grupo de recursos; use o que foi fornecido)*
-    - **Região**: *escolha entre Leste dos EUA, França Central, Coreia Central, Norte da Europa, Sudeste Asiático, Oeste da Europa, Oeste dos EUA ou Leste da Ásia\**
+    - **Região**: *escolha entre Leste dos EUA, Oeste dos EUA, França Central, Coreia Central, Norte da Europa, Sudeste Asiático, Oeste da Europa ou Leste Asiático\**
     - **Nome**: *insira um nome exclusivo*
     - **Tipo de preço**: Standard S0
 
-    \*No momento, os recursos de Visão de IA do Azure 4.0 estão disponíveis apenas nessas regiões.
+    \*No momento, todos os recursos da Visão de IA do Azure 4.0 estão disponíveis apenas nessas regiões.
 
-3. Marque as caixas de seleção necessárias e crie o recurso.
-4. Aguarde a conclusão da implantação e veja os detalhes da implantação.
-5. Quando o recurso tiver sido implantado, vá até ele e exiba sua página **Chaves e Ponto de Extremidade**. Você precisará do ponto de extremidade e de uma das chaves desta página no próximo procedimento.
+4. Marque as caixas de seleção necessárias e crie o recurso.
+5. Aguarde a conclusão da implantação e veja os detalhes da implantação.
+6. Quando o recurso tiver sido implantado, vá até ele e exiba sua página **Chaves e Ponto de Extremidade**. Você precisará do ponto de extremidade e de uma das chaves desta página no próximo procedimento.
 
 ## Preparação para usar o SDK da Visão de IA do Azure
 
@@ -49,7 +50,7 @@ Neste exercício, você concluirá um aplicativo cliente parcialmente implementa
     **C#**
     
     ```
-    dotnet add package Azure.AI.Vision.ImageAnalysis -v 1.0.0-beta.1
+    dotnet add package Azure.AI.Vision.ImageAnalysis -v 1.0.0-beta.3
     ```
 
     > **Observação**: se você for solicitado a instalar extensões de kit de desenvolvimento, você pode fechar a mensagem com segurança.
@@ -57,8 +58,10 @@ Neste exercício, você concluirá um aplicativo cliente parcialmente implementa
     **Python**
     
     ```
-    pip install azure-ai-vision-imageanalysis==1.0.0b1
+    pip install azure-ai-vision-imageanalysis==1.0.0b3
     ```
+
+    > **Dica**: se você estiver fazendo este laboratório em sua própria máquina, também precisará instalar `matplotlib` e `pillow`.
     
 3. Exiba o conteúdo da pasta **image-analysis** e observe que ela contém um arquivo para definições de configuração:
     - **C#**: appsettings.json
