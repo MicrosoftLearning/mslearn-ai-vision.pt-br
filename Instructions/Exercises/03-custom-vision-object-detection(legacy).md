@@ -13,9 +13,9 @@ Neste exercício, você usa o serviço Visão Personalizada para treinar um mode
 Se você já clonou o repositório de código **mslearn-ai-vision** para o ambiente em que está trabalhando neste laboratório, abra-o no Visual Studio Code, caso contrário, siga estas etapas para cloná-lo agora.
 
 1. Inicie o Visual Studio Code.
-2. Abra a paleta (SHIFT+CTRL+P) e execute um comando **Git: Clone** para clonar o repositório `https://github.com/MicrosoftLearning/mslearn-ai-vision` para uma pasta local (não importa qual pasta).
-3. Quando o repositório tiver sido clonado, abra a pasta no Visual Studio Code.
-4. Aguarde enquanto arquivos adicionais são instalados para dar suporte aos projetos de código C# no repositório.
+2. Abra a paleta (SHIFT+CTRL+P) e execute o comando **Git: Clone** para clonar o repositório `https://github.com/MicrosoftLearning/mslearn-ai-vision` em uma pasta local (não importa qual pasta).
+3. Depois que o repositório for clonado, abra a pasta no Visual Studio Code.
+4. Aguarde enquanto os arquivos adicionais são instalados para dar suporte aos projetos de código C# no repositório.
 
     > **Observação**: se você for solicitado a adicionar ativos necessários para compilar e depurar, selecione **Agora não**.
 
@@ -65,7 +65,7 @@ Para treinar um modelo de detecção de objeto, você precisa carregar imagens q
 
 Como alternativa, você pode simplesmente arrastar o objeto para criar uma região.
 
-5. Quando a região envolver o objeto, adicione uma nova marcação com o tipo de objeto apropriado (*maçã,**banana*ou *laranja*), conforme mostrado aqui:
+5. Quando a região envolver o objeto, adicione uma nova marcação com o tipo de objeto apropriado (*maçã*, *banana* ou *laranja*), conforme mostrado aqui:
 
 ![Um objeto marcado em uma imagem](../media/object-tag.jpg)
 
