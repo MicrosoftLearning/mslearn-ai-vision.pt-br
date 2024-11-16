@@ -1,10 +1,9 @@
 ---
 lab:
-  title: Detectar objetos em imagens com a Visão Personalizada
-  module: Module 9 - Developing Custom Vision Solutions
+  title: Detectar objetos em imagens com a Visão Personalizada de IA do Azure
 ---
 
-# Detectar objetos em imagens com a Visão Personalizada
+# Detectar objetos em imagens com a Visão Personalizada de IA do Azure
 
 Neste exercício, você usa o serviço Visão Personalizada para treinar um modelo de *Detecção de objetos* capaz de detectar e localizar três classes de frutas (maçã, banana e laranja) em uma imagem.
 
@@ -21,7 +20,9 @@ Se você já clonou o repositório de código **mslearn-ai-vision** para o ambie
 
 ## Criar recursos de Visão Personalizada
 
-Se você já tiver recursos de **Visão Personalizada** para treinamento e previsão em sua assinatura do Azure, poderá usá-los neste exercício. Ou use as instruções a seguir para criar.
+Se você já tiver recursos de **Visão Personalizada** para treinamento e previsão em sua assinatura do Azure, poderá usar estes ou uma conta multisserviço existente neste exercício. Ou use as instruções a seguir para criar.
+
+> **Observação**: se você usar uma conta multisserviço, a chave e o ponto de extremidade serão os mesmos para o treinamento e a previsão.
 
 1. Em uma nova guia do navegador, abra o portal do Azure em `https://portal.azure.com` e entre usando a conta Microsoft associada com sua assinatura do Azure.
 2. Selecione o botão **&#65291;Criar um recurso**, procure *Visão Personalizada* e crie um recurso de **Visão Personalizada** com as seguintes configurações:
@@ -61,27 +62,27 @@ Para treinar um modelo de detecção de objeto, você precisa carregar imagens q
 3. Depois de carregar as imagens, selecione a primeira para abri-la.
 4. Mantenha o mouse sobre qualquer objeto na imagem até que uma região detectada automaticamente seja exibida, como na imagem abaixo. Em seguida, selecione o objeto e, se necessário, reorganize a região para cercá-lo.
 
-![A região padrão de um objeto](../media/object-region.jpg)
+    ![A região padrão de um objeto](../media/object-region.jpg)
 
-Como alternativa, você pode simplesmente arrastar o objeto para criar uma região.
+    Como alternativa, você pode simplesmente arrastar o objeto para criar uma região.
 
 5. Quando a região envolver o objeto, adicione uma nova marcação com o tipo de objeto apropriado (*maçã*, *banana* ou *laranja*), conforme mostrado aqui:
 
-![Um objeto marcado em uma imagem](../media/object-tag.jpg)
+    ![Um objeto marcado em uma imagem](../media/object-tag.jpg)
 
 6. Selecione e marque os outros objetos na imagem, redimensionando as regiões e adicionando novas marcações conforme o necessário.
 
-![Dois objetos marcados em uma imagem](../media/object-tags.jpg)
+    ![Dois objetos marcados em uma imagem](../media/object-tags.jpg)
 
 7. Use o link **>** à direita para ir para a próxima imagem e marcar os objetos. Em seguida, continue trabalhando em toda a coleção de imagens, marcando cada maçã, banana e laranja.
 
-8. Quando terminar de marcar a última imagem, feche o editor **Detalhes da Imagem** e, na página **Imagens de Treinamento**, em **Marcações**, selecione **Marcado** para ver todas as suas imagens marcadas:
+8. Quando terminar de marcar a última imagem, feche o editor de **Detalhes da imagem**. Na página **Imagens de Treinamento**, em **Marcações**, selecione **Marcado** para ver todas as imagens marcadas:
 
 ![Imagens marcadas em um projeto](../media/tagged-images.jpg)
 
 ## Usar a API de treinamento para carregar imagens
 
-Você pode usar a ferramenta gráfica no portal Visão Personalizada para marcar suas imagens, mas muitas equipes de desenvolvimento de IA usam outras ferramentas que geram arquivos contendo informações sobre marcas e regiões de objetos em imagens. Em cenários como este, você pode usar a API de treinamento de Visão Personalizada para carregar imagens marcadas para o projeto.
+Você pode usar a interface no portal Visão Personalizada para marcar suas imagens, mas muitas equipes de desenvolvimento de IA usam outras ferramentas que geram arquivos contendo informações sobre marcas e regiões de objetos em imagens. Em cenários como este, você pode usar a API de treinamento de Visão Personalizada para carregar imagens marcadas para o projeto.
 
 > **Observação**: neste exercício, você pode optar por usar a API do SDK do **C#** ou **do Python**. Nas etapas abaixo, execute as ações apropriadas para a linguagem de sua preferência.
 
@@ -100,7 +101,7 @@ dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Trainin
 **Python**
 
 ```
-pip install azure-cognitiveservices-vision-customvision==3.1.0
+pip install azure-cognitiveservices-vision-customvision==3.1.1
 ```
 
 6. Exiba o conteúdo da pasta **train-detector** e observe que ela contém um arquivo para definições de configuração:
@@ -115,7 +116,6 @@ pip install azure-cognitiveservices-vision-customvision==3.1.0
 
 8. Observe que a pasta **train-detector** contém uma subpasta na qual os arquivos de imagem referenciados no arquivo JSON são armazenados.
 
-
 9. Observe que a pasta **train-detector** contém um arquivo de código para o aplicativo cliente:
 
     - **C#**: Program.cs
@@ -125,26 +125,27 @@ pip install azure-cognitiveservices-vision-customvision==3.1.0
     - Os namespaces do pacote instalado são importados
     - A função **Principal** recupera as definições de configuração e usa a chave e o ponto de extremidade para criar um **CustomVisionTrainingClient** autenticado, que é usado com a ID do projeto para criar uma referência de **Projeto** para o seu projeto.
     - A função **Upload_Images** extrai as informações de região marcada no arquivo JSON e as usa para criar um lote de imagens com regiões, que ele carrega para o projeto.
+
 10. Retorne o terminal integrado para a pasta **train-detector** e digite o seguinte comando para executar o programa:
     
-**C#**
-
-```
-dotnet run
-```
-
-**Python**
-
-```
-python train-detector.py
-```
+    **C#**
+    
+    ```
+    dotnet run
+    ```
+    
+    **Python**
+    
+    ```
+    python train-detector.py
+    ```
     
 11. Aguarde até que o programa finalize. Em seguida, retorne ao seu navegador e visualize a página **imagens de treinamento** do seu projeto no portal Visão Personalizada (atualize o navegador, se necessário).
 12. Verifique se algumas novas imagens marcadas foram adicionadas ao projeto.
 
 ## Treinar e testar um modelo
 
-Agora que você marcou as imagens em seu projeto, está tudo pronto para treinar um modelo.
+Agora que você marcou as imagens em seu projeto, está tudo pronto para treinar um modelo. Você
 
 1. No projeto Visão Personalizada, clique em **Treinar** para treinar um modelo de detecção de objeto usando as imagens marcadas. Selecione a opção **Treinamento Rápido**.
 2. Aguarde a conclusão do treinamento (pode demorar cerca de dez minutos) e mapeie as métricas de desempenho de *Precisão,*, *Recall* e *mAP* – Essas métricas medem a precisão da previsão do modelo de classificação e devem ser todas altas.
@@ -176,7 +177,7 @@ dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Predict
 **Python**
 
 ```
-pip install azure-cognitiveservices-vision-customvision==3.1.0
+pip install azure-cognitiveservices-vision-customvision==3.1.1
 ```
 
 > **Observação**: o pacote SDK do Python inclui pacotes de treinamento e previsão e pode já estar instalado.
