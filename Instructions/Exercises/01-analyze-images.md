@@ -6,7 +6,7 @@ lab:
 
 # Analisar imagens com a Visão de IA do Azure
 
-O Visão de IA do Azure é um recurso de inteligência artificial que permite que os sistemas de software interpretem a entrada visual analisando imagens. No Microsoft Azure, o serviço **Visão** de IA do Azure fornece modelos pré-criados para tarefas comuns de pesquisa visual computacional, incluindo análise de imagens para sugerir legendas e marcas, detecção de objetos comuns e pessoas. Você também pode usar o serviço de Visão de IA do Azure para remover o plano de fundo ou realçar a cobertura em primeiro plano.
+O Visão de IA do Azure é um recurso de inteligência artificial que permite que os sistemas de software interpretem a entrada visual analisando imagens. No Microsoft Azure, o serviço **Visão** de IA do Azure fornece modelos pré-criados para tarefas comuns de pesquisa visual computacional, incluindo análise de imagens para sugerir legendas e marcas, detecção de objetos comuns e pessoas. 
 
 ## Clone o repositório para este curso
 
@@ -408,86 +408,6 @@ if result.people is not None:
 3. Salve suas alterações e execute o programa uma vez para cada um dos arquivos de imagem na pasta **images**, observando todos os objetos que são detectados. Após cada execução, exiba o arquivo **objects.jpg** gerado na mesma pasta do arquivo de código para ver os objetos anotados.
 
 > **Observação**: nas tarefas anteriores, você usou um único método para analisar a imagem e, em seguida, adicionou código para analisar e exibir os resultados. O SDK também fornece métodos individuais para sugerir legendas, identificar tags, detectar objetos e assim por diante – o que significa que você pode usar o método mais apropriado para retornar apenas as informações necessárias, reduzindo o conteúdo de dados que precisa ser retornado. Consulte a [documentação do SDK .NET](https://learn.microsoft.com/dotnet/api/overview/azure/cognitiveservices/computervision?view=azure-dotnet) ou do [SDK Python](https://learn.microsoft.com/python/api/azure-cognitiveservices-vision-computervision/azure.cognitiveservices.vision.computervision) para obter mais detalhes.
-
-## Remover o plano de fundo ou gerar um fosco de primeiro plano de uma imagem
-
-Em alguns casos, talvez seja necessário criar a remoção do plano de fundo de uma imagem ou talvez seja necessário criar um fosco de primeiro plano dessa imagem. Vamos começar com a remoção do plano de fundo.
-
-1. No arquivo de código, localize a função **BackgroundForeground** e, sob o comentário **Remova o plano de fundo da imagem ou gere um fosco de primeiro plano**, adicione o seguinte código:
-
-**C#**
-
-```C#
-// Remove the background from the image or generate a foreground matte
-Console.WriteLine($" Background removal:");
-// Define the API version and mode
-string apiVersion = "2023-02-01-preview";
-string mode = "backgroundRemoval"; // Can be "foregroundMatting" or "backgroundRemoval"
-
-string url = $"computervision/imageanalysis:segment?api-version={apiVersion}&mode={mode}";
-
-// Make the REST call
-using (var client = new HttpClient())
-{
-    var contentType = new MediaTypeWithQualityHeaderValue("application/json");
-    client.BaseAddress = new Uri(endpoint);
-    client.DefaultRequestHeaders.Accept.Add(contentType);
-    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", key);
-
-    var data = new
-    {
-        url = $"https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Labfiles/01-analyze-images/Python/image-analysis/{imageFile}?raw=true"
-    };
-
-    var jsonData = JsonSerializer.Serialize(data);
-    var contentData = new StringContent(jsonData, Encoding.UTF8, contentType);
-    var response = await client.PostAsync(url, contentData);
-
-    if (response.IsSuccessStatusCode) {
-        File.WriteAllBytes("background.png", response.Content.ReadAsByteArrayAsync().Result);
-        Console.WriteLine("  Results saved in background.png\n");
-    }
-    else
-    {
-        Console.WriteLine($"API error: {response.ReasonPhrase} - Check your body url, key, and endpoint.");
-    }
-}
-```
-
-**Python**
-
-```Python
-# Remove the background from the image or generate a foreground matte
-print('\nRemoving background from image...')
-    
-url = "{}computervision/imageanalysis:segment?api-version={}&mode={}".format(endpoint, api_version, mode)
-
-headers= {
-    "Ocp-Apim-Subscription-Key": key, 
-    "Content-Type": "application/json" 
-}
-
-image_url="https://github.com/MicrosoftLearning/mslearn-ai-vision/blob/main/Labfiles/01-analyze-images/Python/image-analysis/{}?raw=true".format(image_file)  
-
-body = {
-    "url": image_url,
-}
-    
-response = requests.post(url, headers=headers, json=body)
-
-image=response.content
-with open("background.png", "wb") as file:
-    file.write(image)
-print('  Results saved in background.png \n')
-```
-    
-2. Salve as alterações e execute o programa uma vez para cada um dos arquivos de imagem na pasta **images**, abrindo o arquivo **background.png** gerado na mesma pasta que o arquivo de código para cada imagem.  Observe como o plano de fundo foi removido de cada uma das imagens.
-
-Vamos agora gerar um fosco em primeiro plano para nossas imagens.
-
-3. No arquivo de código, localize a função **BackgroundForeground** e, sob o comentário **Definir a versão e o modo da API**, altere a variável mode para `foregroundMatting`.
-
-4. Salve as alterações e execute o programa uma vez para cada um dos arquivos de imagem na pasta **images**, abrindo o arquivo **background.png** gerado na mesma pasta que o arquivo de código para cada imagem.  Observe como um fosco de primeiro plano foi gerado para suas imagens.
 
 ## Limpar os recursos
 
