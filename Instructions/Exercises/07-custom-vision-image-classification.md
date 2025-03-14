@@ -46,7 +46,7 @@ Neste exercício, você criará recursos de **Visão Personalizada** para treina
 
 Para treinar um modelo de classificação de imagens, você precisa criar um projeto de Visão Personalizada com base em seu recurso de treinamento. Para fazer isso, você usará o portal de Visão Personalizada.
 
-1. No Visual Studio Code, exiba as imagens de treinamento na pasta **07-custom-vision-image-classification/training-images** onde você clonou o repositório. Esta pasta contém subpastas de imagens de maçã, banana e laranja.
+1. No Visual Studio Code, visualize as imagens de treinamento na pasta **LabFiles/07-custom-vision-image-classification/training-images** em que você clonou o repositório. Esta pasta contém subpastas de imagens de maçã, banana e laranja.
 2. Em outra guia do navegador, abra o portal de Visão Personalizada em `https://customvision.ai`. Caso solicitado, entre usando a conta Microsoft associada à sua assinatura do Azure e concorde com os termos de serviço.
 3. No portal de Visão Personalizada, crie um projeto com as seguintes configurações:
     - **Nome**: classificar frutas
@@ -55,7 +55,7 @@ Para treinar um modelo de classificação de imagens, você precisa criar um pro
     - **Tipos de Projeto**: Classificação
     - **Tipos de classificação**: Multiclasse (tag única por imagem)
     - **Domínios**: comida
-4. No novo projeto, clique em **\[+\] Adicionar imagens** e selecione todos os arquivos na pasta **training-images/apple** que você extraiu anteriormente. Em seguida, carregue os arquivos de imagem, especificando a tag *maçã*, desta forma:
+4. No novo projeto, clique em **\[+\]Adicionar imagens** e selecione todos os arquivos na pasta **LabFiles/07-custom-vision-image-classification/training-images/apple** que você exibiu anteriormente. Em seguida, carregue os arquivos de imagem, especificando a tag *maçã*, desta forma:
 
 ![Carregar maçã com tag maçã](../media/upload_apples.jpg)
    
