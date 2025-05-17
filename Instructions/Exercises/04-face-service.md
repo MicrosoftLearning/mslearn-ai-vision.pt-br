@@ -44,7 +44,7 @@ Neste exercício, você concluirá um aplicativo cliente parcialmente implementa
 
 > **Observação**: você pode optar por usar o SDK para **C#** ou **Python**. Nas etapas abaixo, execute as ações apropriadas para a linguagem de sua preferência.
 
-1. No Visual Studio Code, no painel **Explorer**, navegue até a pasta **04-face** e expanda a pasta **C-Sharp** ou a pasta **Python** dependendo da sua preferência de liguagem.
+1. No Visual Studio Code, no painel **Explorer**, navegue até a pasta **Labfiles/04-face** e expanda a pasta **C-Sharp** ou a pasta **Python** dependendo da sua preferência de idioma.
 2. Clique com o botão direito do mouse na pasta **computer-vision** e abra um terminal integrado. Em seguida, instale o pacote do SDK da Visão de IA do Azure executando o comando apropriado para sua preferência de linguagem:
 
     **C#**
@@ -203,7 +203,7 @@ Se você quiser ver a pontuação de confiança de todas as pessoas detectadas p
 
 Enquanto o serviço de **Visão de IA do Azure** oferece detecção facial básica (juntamente com muitos outros recursos de análise de imagem), o serviço de **Detecção Facial** fornece funcionalidade mais abrangente para análise e reconhecimento facial.
 
-1. No Visual Studio Code, no painel **Explorer**, navegue até a pasta **04-face** e expanda a pasta **C-Sharp** ou a pasta **Python** dependendo da sua preferência de liguagem.
+1. No Visual Studio Code, no painel **Explorer**, navegue até a pasta **Labfiles/04-face** e expanda a pasta **C-Sharp** ou a pasta **Python** dependendo da sua preferência de idioma.
 2. Clique com o botão direito do mouse na pasta **face-api** e abra um terminal integrado. Em seguida, instale o pacote SDK de Detecção Facial executando o comando apropriado para sua preferência de linguagem:
 
     **C#**
