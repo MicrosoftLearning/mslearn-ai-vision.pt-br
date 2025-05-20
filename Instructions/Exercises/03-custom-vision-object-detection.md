@@ -57,7 +57,7 @@ Para treinar um modelo de detecção de objetos, você precisa criar um projeto 
 
 Para treinar um modelo de detecção de objeto, você precisa carregar imagens que contenham as classes que serão identificadas pelo modelo e marcá-las para indicar caixas delimitadoras para cada instância de objeto.
 
-1. No Visual Studio Code, exiba as imagens de treinamento na pasta **03-object-detection/training-images** onde você clonou o repositório. Esta pasta contém imagens de frutas.
+1. No Visual Studio Code, exiba as imagens de treinamento na pasta**Labfiles/03-object-detection/training-images** onde você clonou o repositório. Esta pasta contém imagens de frutas.
 2. No portal de Visão Personalizada, no seu projeto de detecção de objetos, selecione **Adicionar imagens** e faça upload de todas as imagens da pasta extraída.
 3. Depois de carregar as imagens, selecione a primeira para abri-la.
 4. Mantenha o mouse sobre qualquer objeto na imagem até que uma região detectada automaticamente seja exibida, como na imagem abaixo. Em seguida, selecione o objeto e, se necessário, reorganize a região para cercá-lo.
@@ -89,7 +89,7 @@ Você pode usar a interface no portal Visão Personalizada para marcar suas imag
 1. Clique no ícone *configurações* (&#9881;) no canto superior direito da página **Imagens de treinamento** no portal Visão Personalizada para exibir as configurações do projeto.
 2. Em **Geral** (à esquerda), anote a **ID do projeto** que identifica exclusivamente este projeto.
 3. À direita, em **Recursos**, observe que a chave e o ponto de extremidade são mostrados. Esses são os detalhes do recurso de *treinamento* (você também pode obter essas informações exibindo o recurso no portal do Azure).
-4. No Visual Studio Code, na pasta **03-object-detection**, expanda a pasta **C-Sharp** ou **Python** dependendo da sua preferência de linguagem.
+4. No Visual Studio Code, na pasta **Labfiles/03-object-detection**, expanda a pasta **C-Sharp** ou **Python** dependendo da sua preferência de linguagem.
 5. Clique com o botão direito do mouse na pasta **train-detector** e abra um terminal integrado. Em seguida, instale o pacote de treinamento de visão personalizada executando o comando apropriado para sua preferência de linguagem:
 
 **C#**
@@ -165,7 +165,7 @@ Agora está tudo pronto para publicar seu modelo treinado e poder usá-lo em um 
 
 Agora que você publicou o modelo de classificação de imagem, pode usá-lo em um aplicativo cliente. Mais uma vez, você pode optar por usar **C#** ou **Python**.
 
-1. No Visual Studio Code, navegue até a pasta **03-object-detection** e, na pasta de linguagem preferida (**C-Sharp** ou **Python**), expanda a pasta **test-detector**.
+1. No Visual Studio Code, navegue até a pasta **Labfiles/03-object-detection** e, na pasta de idioma preferido (**C-Sharp** ou **Python**), expanda a pasta **test-detector**.
 2. Clique com o botão direito do mouse na pasta **test-detector** e abra um terminal integrado. Em seguida, insira o seguinte comando específico do SDK para instalar o pacote de previsão de visão personalizada:
 
 **C#**
